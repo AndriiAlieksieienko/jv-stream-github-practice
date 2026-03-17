@@ -8,6 +8,8 @@ public class CandidateValidator implements Predicate<Candidate> {
     private static final int REQUIRED_LIVING_YEARS = 10;
     private static final int FROM_YEAR_INDEX = 0;
     private static final int TO_YEAR_INDEX = 1;
+    private static final String NATIONALITY = "Ukrainian";
+
 
     //write your code here
 
@@ -19,7 +21,7 @@ public class CandidateValidator implements Predicate<Candidate> {
 
         return candidate.getAge() >= REQUIRED_YEARS
                 && candidate.isAllowedToVote()
-                && candidate.getNationality().equals("Ukrainian")
+                && candidate.getNationality().equals(NATIONALITY)
                 && toYear - fromYear >= REQUIRED_LIVING_YEARS;
     }
 }
